@@ -1,15 +1,18 @@
 const express = require('express');
 
-const rotas = express();
+const app = express();
 
-const site = require('./routes')
+const port = 8080;
 
-const port = 8080; 
+const rotas = require('./routes');
 
-rotas.listen(port, function () {
+rotas.set('view engine', 'ejs');
+rotas.use(express.static('public'));
 
-    console.log(`Servidor rodando na porta ${port}`);
+app.use(rotas);
+
+app.listen(port, function () {
+
+    console.log(`Servidor rodando na porta ${port}`); 
 
 });
-
-rotas.use(site);

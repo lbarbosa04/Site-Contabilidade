@@ -1,12 +1,8 @@
 const express = require('express');
-const router = express();
+const rotas = express();
 
-router.get("/Home", (req, res) => {
-    res.send("Pegou home");
+rotas.get("/home", (req, res) => {
+    res.render("index");
 });
 
-router.get("/", (req, res) => {
-    res.send("pegou")
-})
-
-module.exports = router;
+module.exports = rotas; 
