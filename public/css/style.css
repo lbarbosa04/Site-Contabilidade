@@ -1,43 +1,10 @@
 body{
-    background-color: black;
-}
-
-.secao-inicio{
     background-image: url('../img/imagem-contabilidade-escura.png');
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 10%;
 }
 
-.inicio-texto{
-    background-color: rgba(13, 71, 161, 0.5);
-    color: rgb(202, 216, 216);
-    width: 900px;
-    padding: 20px;
-    border-radius: 25px;
-
-}
-
-.carousel-item img {
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.carousel-img{
-    padding: 5px;
-    background-image: url('../img/carousel-regimes/fundo-carousel.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-}
-
-.carousel-cabecalho{
+.card-header{
+    background-color: #1e293b;
+    border-radius:  20px;
     color: rgb(202, 216, 216);
 }

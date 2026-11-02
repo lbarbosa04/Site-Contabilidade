@@ -1,7 +1,7 @@
 const express = require('express');
 const rotas = express();
 
-rotas.get("/home", (req, res) => {
+rotas.get("/perguntas", (req, res) => {
     res.render("index");
 });
 
