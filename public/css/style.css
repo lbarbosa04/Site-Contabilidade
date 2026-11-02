@@ -3,8 +3,12 @@ body{
     background-size: cover;
 }
 
+.header-top{
+   margin-top: 70px;
+}
+
 .card-header{
     background-color: #1e293b;
     border-radius:  20px;
-    color: rgb(202, 216, 216);
+    color: #79cb97;
 }

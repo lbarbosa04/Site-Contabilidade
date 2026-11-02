@@ -2,28 +2,28 @@
 
 <body>
   <%- include('partials/navbar.ejs') %>
-  <br>
+ 
 
-    <div class="container">
+    <div class="container header-top">
      <div class="card">
         <div class="card-header" >
            <h3>Realizar Perguntas</h3>
         </div>
 
        <div class="card-body" > 
-           <form>
+           <form method="POST" action="/salvarPerguntas" >
              <label>Titulo</label>
-             <input type="text" class="form-control" placeholder="Digite o titulo" />
+             <input type="text" class="form-control" placeholder="Digite o titulo" name="titulo"/>
              <br/>
              <label>Descrição</label>
-             <textarea placeholder="Digite sua pergunta aqui" class="form-control"></textarea>
+             <textarea placeholder="Digite sua pergunta aqui" class="form-control" name="descricao"></textarea>
              <br/>
-             <button class="btn btn-success">Perguntar</button>
+             <button class="btn btn-dark">Perguntar</button>
            </form>
        </div> 
      </div>
     </div>
-    
+
 </body>
 <%- include('partials/script.ejs') %>
 
