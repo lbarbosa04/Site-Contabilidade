@@ -3,7 +3,7 @@ const app = express();
 const port = 8080;
 const bodyParser = require('body-parser');
 const connection = require('../../database/database');
-const perguntasModulo = require('../../database/perguntas');
+const perguntas = require('../../database/perguntas');
 
 connection
    .authenticate()

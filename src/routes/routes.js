@@ -1,5 +1,6 @@
 const express = require('express');
 const rotas = express.Router();
+const perguntas = require('../../database/perguntas');
 
 rotas.get("/perguntas", (req, res) => {
     res.render("index");
@@ -10,7 +11,12 @@ rotas.post('/salvarPerguntas', (req, res) => {
     let titulo = req.body.titulo;
     let descricao = req.body.descricao;
 
-    res.send(`Formulario enviado! Titulo: ${titulo} e descrição: ${descricao}`)
-})
+    perguntas.create({
+        titulo: titulo,
+        descricao: descricao
+    }).then(() =>{
+        res.redirect('/perguntas');
+    });
+});
 
 module.exports = rotas;
