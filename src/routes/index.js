@@ -2,6 +2,17 @@ const express = require('express');
 const app = express();
 const port = 8080;
 const bodyParser = require('body-parser');
+const connection = require('../../database/database');
+const perguntasModulo = require('../../database/perguntas');
+
+connection
+   .authenticate()
+   .then(() =>{
+    console.log("Conexão feita com sucesso!");
+   })
+   .catch((msgErro) =>{
+    console.log(msgErro);
+   })
 
 const rotas = require('./routes');
 
